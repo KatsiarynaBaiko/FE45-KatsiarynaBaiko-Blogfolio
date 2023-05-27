@@ -1,0 +1,60 @@
+// step 6
+// стилизация кнопок
+// также создаем дикерторию styles 
+// куда поместим используемые цвета
+// для того чтобы кнопка переключалась по цветам в Button.tsx пишем
+// const buttonStyle = styles [type]
+// return <div onClick={onClick} className={buttonStyle}>{title}</div>;
+// для того, чтобы применилимь свойства mixin button gbitv  @include button();
+
+
+@import "src/styles/colors";
+
+@mixin button {
+  padding: 16px 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  border: 1px solid transparent; // чтобы не скакала кнопочка
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.primary {
+  @include button();
+  background-color: $primary;
+  color: $white;
+  &:hover {
+    background-color: $primary-secondary;
+  }
+}
+
+.secondary {
+  @include button();
+  background-color: $light;
+  color: $secondary;
+  &:hover {
+    background-color: $medium;
+  }
+}
+
+.error {
+  @include button();
+  color: $error;
+  &:hover {
+    border: 1px solid $medium;
+  }
+}
+
+.disabled {
+  color: $gray;
+  background-color: $light;
+  &:hover {
+    cursor: not-allowed; // чтобы нельзя было тыкнуть
+    background-color: $light;
+  }
+}

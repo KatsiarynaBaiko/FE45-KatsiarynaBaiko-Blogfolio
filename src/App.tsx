@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+//step 3 Button
+import Button, { ButtonTypes } from './components/Button';
+
+// function App() {
+//   return (
+//     <div></div>
+//   );
+// }
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* //step 4 Button */}
+      {/* <Button type={ButtonTypes.Primary} title={'Primary'} onClick={()=> {}} disabled={true}/> или */}
+      <Button disabled type={ButtonTypes.Primary} title={'Primary'} onClick={()=> {}}/> 
+      <Button type={ButtonTypes.Secondary} title={'Secondary'} onClick={()=> {}}/>
+      <Button type={ButtonTypes.Error} title={'Error'} onClick={()=> {}}/>
     </div>
   );
 }
