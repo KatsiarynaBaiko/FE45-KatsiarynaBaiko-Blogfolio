@@ -5,7 +5,7 @@
 // для того чтобы кнопка переключалась по цветам в Button.tsx пишем
 // const buttonStyle = styles [type]
 // return <div onClick={onClick} className={buttonStyle}>{title}</div>;
-// для того, чтобы применилимь свойства mixin button gbitv  @include button();
+// для того, чтобы применилимь свойства mixin button & @include button();
 
 
 @import "src/styles/colors";
