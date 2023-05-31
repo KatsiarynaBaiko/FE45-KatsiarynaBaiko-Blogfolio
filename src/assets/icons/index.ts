@@ -1,6 +1,6 @@
 import { format } from "path";
 
-export { DislikeIcon } from './Dislikeicon';
-export { LikeIcon } from './Likeicon';
-export { BookmarkIcon } from './Bookmarkicon';
-export { DotsMenuIcon } from './Dotsmenuicon';
+export { DislikeIcon } from './DislikeIcon';
+export { BookmarkIcon } from './BookmarkIcon';
+export { LikeIcon } from './LikeIcon';
+export { DotsMenuIcon } from './DotsMenuIcon';
