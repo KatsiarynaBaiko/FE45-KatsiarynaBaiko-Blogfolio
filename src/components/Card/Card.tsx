@@ -58,19 +58,23 @@ const Card: FC<CardProps> = ({ type, id, date, title, text, image, lesson_num, a
             <div className={styles.cardContent}>
                 <div className={styles.cardTextContent}>
                     <span className={styles.date}>{date}</span>
-                    <h3 className={styles.cardTitle}>{title}</h3>
-                    <p className={styles.cardText}>{text}</p>
+                    <div className={styles.cardTitle}>{title}</div>
+                    {/* <div className={styles.cardText}>{text}</div> */}
+                    {/* через display: none не делаем через условный рендеринг (прописываем условие) */}
+                    {type === CardTypes.Large && (
+                        <div className={styles.cardText}>{text}</div>
+                    )}
                 </div>
                 <div className={styles.cardImage}>
                     <img src={image} alt="#" />
                 </div>
             </div>
             <div className={styles.cardReaction}>
-                <div className={styles.cardReationLikeDislike}>
+                <div className={styles.cardReactionLikeDislike}>
                     <LikeIcon />
                     <DislikeIcon />
                 </div>
-                <div className={styles.cardReacrionNavigation}>
+                <div className={styles.cardReactionNavigation}>
                     <BookmarkIcon />
                     <DotsMenuIcon />
                 </div>
