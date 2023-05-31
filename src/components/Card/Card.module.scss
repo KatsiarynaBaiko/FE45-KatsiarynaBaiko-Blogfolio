@@ -47,7 +47,7 @@
 // large
 .large {
     max-width: 736px;
-}
+
 
 .cardContent {
     display: flex;
@@ -104,12 +104,13 @@
         cursor: pointer
     }
 }
+}
 
 
 // // medium
 .medium {
     max-width: 352px;
-}
+
 
 .cardContent {
     display: flex;
@@ -165,12 +166,13 @@
         cursor: pointer
     }
 }
+}
 
 
 // small
 .small {
     max-width: 352px;
-}
+
 
 .cardContent {
     display: flex;
@@ -225,4 +227,5 @@
     &:hover {
         cursor: pointer
     }
+}
 }
