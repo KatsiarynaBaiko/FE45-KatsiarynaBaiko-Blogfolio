@@ -1,0 +1,197 @@
+@import "src/styles/colors";
+@import "src/styles/mixins";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// large
+.large {
+    max-width: 736px;
+
+
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 31px;
+    // gap: 32px;
+}
+
+.cardTextContent {
+    max-width: 448px;
+}
+
+.date {
+    @include cardSpan();
+}
+
+.cardTitle {
+    @include cardTitle();
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 24px;
+}
+
+.cardText {
+    @include cardText();
+}
+
+.cardImage {
+    width: 256px;
+    height: 244px;
+}
+
+.cardImage img {
+    @include cardImageImg();
+}
+
+.cardReaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 41px;
+    border-bottom: 1px solid $medium;
+}
+
+.cardReactionLikeDislike,
+.cardReactionNavigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &:hover {
+        cursor: pointer
+    }
+}
+}
+
+
+// // medium
+.medium {
+    max-width: 352px;
+
+
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin-bottom: 28px;
+}
+
+.cardTextContent {
+    max-width: 100%;
+}
+
+.date {
+    @include cardSpan();
+}
+
+.cardTitle {
+    @include cardTitle();
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+// через display: none не делаем через условный рендеринг (прописываем условие)
+// .cardText {
+//     display: none;
+// }
+
+.cardImage {
+    width: 352px;
+    height: 246px;
+    // margin-bottom: 24px;
+}
+
+.cardImage img {
+    @include cardImageImg();
+}
+
+.cardReaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 41px;
+    border-bottom: 1px solid $medium;
+}
+
+.cardReactionLikeDislike,
+.cardReactionNavigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &:hover {
+        cursor: pointer
+    }
+}
+}
+
+
+// small
+.small {
+    max-width: 352px;
+
+
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 24px;
+    // gap: 32px;
+}
+
+.cardTextContent {
+    max-width: 222px;
+}
+
+.date {
+    @include cardSpan();
+}
+
+.cardTitle {
+    @include cardTitle();
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+// через display: none не делаем через условный рендеринг (прописываем условие)
+// .cardText {
+//     display: none;
+// }
+
+.cardImage {
+    width: 96px;
+    height: 96px;
+}
+
+.cardImage img {
+    @include cardImageImg();
+}
+
+.cardReaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 41px;
+    border-bottom: 1px solid $medium;
+}
+
+.cardReactionLikeDislike,
+.cardReactionNavigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &:hover {
+        cursor: pointer
+    }
+}
+
+}
