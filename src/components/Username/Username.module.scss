@@ -1,0 +1,30 @@
+@import "src/styles/colors";
+
+.container {
+  padding: 24px 34px;
+  background-color: $primary;
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.initials {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-secondary;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 34px;
+  color: $white;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 34px;
+  color: $white;
+}
