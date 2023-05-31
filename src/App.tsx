@@ -10,6 +10,7 @@ import { CardTypes } from './components/Card';
 
 //step 3 Input
 import Input from './components/Input';
+import Usermane from './components/Username/Usermane';
 
 
 // function App() {
@@ -76,6 +77,10 @@ const App = () => {
       value={inputValue} 
       // errorText={'Error'}
       />
+
+      <Usermane username={'Katsiaryna'} />
+
+
     </div>
   );
 }
