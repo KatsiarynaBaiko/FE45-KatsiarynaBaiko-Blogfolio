@@ -1,0 +1,13 @@
+@import "/src/styles/colors.scss";
+
+@mixin Title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 24px;
+}
+.title {
+  @include Title();
+  color: $secondary;
+}
