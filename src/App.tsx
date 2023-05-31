@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 //step 3 Button
 import Button, { ButtonTypes } from './components/Button';
@@ -7,6 +8,10 @@ import Button, { ButtonTypes } from './components/Button';
 import Card from './components/Card';
 import { CardTypes } from './components/Card';
 
+//step 3 Input
+import Input from './components/Input';
+
+
 // function App() {
 //   return (
 //     <div></div>
@@ -14,6 +19,14 @@ import { CardTypes } from './components/Card';
 // }
 
 const App = () => {
+
+  // создаем для работы input
+  const [inputValue, setInputValue] = useState ('');
+  const onChange = (value: string) => {
+    setInputValue(value)
+  }
+
+
   return (
     <div>
       {/* //step 4 Button */}
@@ -55,6 +68,14 @@ const App = () => {
         author={0}
       />
 
+      <Input 
+      isTextarea
+      title={'Test Input'} 
+      placeholder={'Hello World'} 
+      onChange={onChange} 
+      value={inputValue} 
+      // errorText={'Error'}
+      />
     </div>
   );
 }
